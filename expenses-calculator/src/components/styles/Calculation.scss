@@ -1,9 +1,51 @@
-.calculation-contaienr{
-  background-color: red;
+.calculation-container{
   margin: 0 20px;
+  height: 100vh;
+  font-family: Space Grotesk;
 
-  .income-container{
-    height: 50px;
-    width: 100%;
+  .income-wrapper{
+    height: 100px;
+    background-color:#ffff;
+    border-radius: 30px;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    .income-input-wrapper{
+      background-color: lightblue;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p{
+        font-weight: 600;
+        font-size: .8rem;
+      }
+    }
+
+    .input-container{
+      background-color: lightcoral;
+  
+      h1{
+        font-size: 3rem;
+        margin: 0;
+      }
+    }
+  }
+
+
+
+
+  .expenses-input-wrapper{
+    height: 100px;
+    background-color:#ffff;
+    border-radius: 30px;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }

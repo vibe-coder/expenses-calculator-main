@@ -2,6 +2,7 @@ import React from 'react'
 import "./styles/Container.scss"
 import logo from "../images/EXcal-logo-03.png"
 import subImage from "../images/sub-hero-image.png"
+import Calculation from './Calculation'
 
 function Container() {
   return (
@@ -26,6 +27,10 @@ function Container() {
       <div className='sub-hero-section'>
         <img className='sub-image' src={subImage} alt='sub-img' />
       </div>
+
+
+
+      <Calculation/>
     </div>
   )
 }
