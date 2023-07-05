@@ -1,0 +1,38 @@
+@media (min-width: 360px) {
+  .component-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #e4e4e7;
+    font-family: Space Grotesk;
+
+    .hero-section{
+      background-color: #030712;
+      color: #f9fafb;
+      height: 50vh;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      padding: 30px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3{
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 400;
+      }
+
+      h1{
+        font-size: 2.7rem;
+        line-height: 50px;
+        margin: 0;
+        font-weight: 100;
+
+        .bold{
+          font-weight: 700;
+        }
+      }
+
+    }
+  }
+}
