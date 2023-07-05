@@ -1,38 +1,89 @@
 @media (min-width: 360px) {
   .component-container{
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     background-color: #e4e4e7;
     font-family: Space Grotesk;
 
     .hero-section{
-      background-color: #030712;
+      background-color: #000000;
       color: #f9fafb;
-      height: 50vh;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      padding: 30px 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      height: 70vh;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      padding: 20px 20px;
 
-      h3{
-        margin: 0;
-        margin-bottom: 10px;
-        font-weight: 400;
-      }
-
-      h1{
-        font-size: 2.7rem;
-        line-height: 50px;
-        margin: 0;
-        font-weight: 100;
-
-        .bold{
-          font-weight: 700;
+      nav{
+        .logo{
+          width: 70px;
+          filter: invert(100%);
         }
       }
 
+      main{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+
+        h1{
+          color: #ffffff;
+          line-height: 49px;
+          margin: 0;
+          // font-weight: 100;
+          font-size: calc(2.7rem + 2.5vw);margin-bottom: 20px;
+        }
+
+        p{
+          margin: 0;
+          font-size: 1.2rem;
+          font-weight: 400;
+          margin-bottom: 80px;
+        }
+
+        .button-wrapper{
+          display: flex;
+          justify-content: center;
+      
+          button{
+            background-color: #ffffff;
+            border: none;
+            padding: 20px 0;
+            width: 170px;
+            border-radius: 60px;
+            font-family: Space Grotesk;
+            font-weight: 500;
+            font-size: 1rem;
+          }
+
+          button:{
+            background-color: #e4e4e7;
+          }
+        }
+
+
+      }
+    }
+
+    .sub-hero-section{
+      background-color: rgba($color: #ffffff, $alpha: 1);
+      height: 50vh;
+      border-radius: 20px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -50px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur( 4px );
+      -webkit-backdrop-filter: blur( 4px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+      .sub-image{
+        width: 100%;
+      }
     }
   }
 }
