@@ -21,13 +21,30 @@ function Calculation() {
 
       <div className='expenses-input-wrapper'>
         <div className='expenses-title-div'>
-          <p>Expenses</p>
+          <p>Expenses</p> 
+          <p>Currency</p>
         </div>
         <div className='expenses-div'>
           <form>
-            <input className='expenses-title' placeholder='Expenses-1-title' type='string'/>
-            <input className='expenses-amount' placeholder='Expenses-Amount' type='string'/>
+            <div className='form-inputs'>
+              <div className='expenses-input-set'>
+                <input className='expenses-title' placeholder='Expenses' type='text'/>
+                <input className='expenses-amount' placeholder='Amount' type='number'/>
+              </div>
+              <div className='expenses-input-set'>
+                <input className='expenses-title' placeholder='Expenses' type='text'/>
+                <input className='expenses-amount' placeholder='Amount' type='number'/>
+              </div>
+              <div className='expenses-input-set'>
+                <input className='expenses-title' placeholder='Expenses' type='text'/>
+                <input className='expenses-amount' placeholder='Amount' type='number'/>
+              </div>
+            </div>
           </form>
+
+          <div className='add-button-div'>
+              <button className='add-button'>+</button>
+            </div>
         </div>
       </div>
     </div>
