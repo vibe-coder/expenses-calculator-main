@@ -3,7 +3,6 @@
     width: 100vw;
     background-color: #e4e4e7;
     font-family: Space Grotesk;
-
     .hero-section{
       background-color: #000000;
       color: #f9fafb;
@@ -11,7 +10,6 @@
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
       padding: 20px 20px;
-
       nav{
         .logo{
           width: 70px;
@@ -19,13 +17,13 @@
         }
       }
 
+
+
       main{
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
-
         h1{
           color: #ffffff;
           line-height: 49px;
@@ -33,18 +31,15 @@
           // font-weight: 100;
           font-size: calc(2.7rem + 2.5vw);margin-bottom: 20px;
         }
-
         p{
           margin: 0;
           font-size: 1.2rem;
           font-weight: 400;
           margin-bottom: 80px;
         }
-
         .button-wrapper{
           display: flex;
           justify-content: center;
-      
           button{
             background-color: #ffffff;
             border: none;
@@ -55,15 +50,12 @@
             font-weight: 500;
             font-size: 1rem;
           }
-
-          button:{
-            background-color: #e4e4e7;
-          }
         }
-
-
       }
     }
+
+
+    // Sub-Section 
 
     .sub-hero-section{
       background-color: rgba($color: #ffffff, $alpha: 1);
@@ -80,7 +72,6 @@
       border-radius: 10px;
       border: 1px solid rgba( 255, 255, 255, 0.18 );
       margin-bottom: 70px;
-
       .sub-image{
         width: 100%;
       }

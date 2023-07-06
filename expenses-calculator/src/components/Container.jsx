@@ -7,22 +7,23 @@ import Calculation from './Calculation'
 function Container() {
   return (
     <div className='component-container'>
-      <div className="hero-section">
 
+      {/* Hero Section */}
+
+      <div className="hero-section">
         <nav>
           <img className='logo' src={logo} alt='logo'/>
         </nav>
-
         <main>
           <h1>Be in charge <br/> of your Expenses!</h1>
           <p>With EXcal, you will always be one step ahead of all your financial expenses. No late surprises!</p>
-          
           <div className='button-wrapper'>
           <button>Get Started</button>
           </div>
         </main>
-
       </div>
+
+        {/* Sub-Hero Section */}
 
       <div className='sub-hero-section'>
         <img className='sub-image' src={subImage} alt='sub-img' />

@@ -1,51 +1,61 @@
-.calculation-container{
-  margin: 0 20px;
-  height: 100vh;
-  font-family: Space Grotesk;
+@media (min-width: 360px) {
+  .calculation-container{
+    margin: 0 20px;
+    height: 100vh;
+    font-family: Space Grotesk;
 
-  .income-wrapper{
-    height: 100px;
-    background-color:#ffff;
-    border-radius: 30px;
-    padding: 30px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 50px;
-
-    .income-input-wrapper{
-      background-color: lightblue;
-      height: 30px;
+    // Salary data collection form
+  
+    .income-wrapper{
+      height: 100px;
+      background-color:#ffff;
+      border-radius: 30px;
+      padding: 30px 30px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 50px;
+      .income-input-wrapper{
+        // background-color: lightblue;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+          font-weight: 600;
+          font-size: .8rem;
+          margin: 0;
+        }
+      }
+      .input-container{
+        // background-color: lightcoral;
+        h1{
+          font-size: 3rem;
+          margin: 0;
+        }
+      }
+    }
+  
+
+    // Expenses Data Collection Form
+
+    .expenses-input-wrapper{
+      height: 100px;
+      background-color:#ffff;
+      border-radius: 30px;
+      padding: 30px 30px;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+
 
       p{
+        margin: 0;
         font-weight: 600;
         font-size: .8rem;
       }
     }
-
-    .input-container{
-      background-color: lightcoral;
-  
-      h1{
-        font-size: 3rem;
-        margin: 0;
-      }
-    }
-  }
-
-
-
-
-  .expenses-input-wrapper{
-    height: 100px;
-    background-color:#ffff;
-    border-radius: 30px;
-    padding: 30px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }
+
+
