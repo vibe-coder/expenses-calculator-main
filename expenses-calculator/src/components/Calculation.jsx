@@ -52,7 +52,34 @@ function Calculation() {
       {/* Expenses Data Collection Form */}
 
       <div className='summary-wrapper'>
-        Hey
+        <div className='summary-title-div'>
+          <h1>Summary</h1>
+        </div>
+
+        <div className='expenses-summary'>
+          <p>Cable TV</p> 
+          <p>$200</p> 
+        </div>
+
+        <div className='expenses-summary'>
+          <p>Cable TV</p> 
+          <p>$200</p> 
+        </div>
+
+        <div className='expenses-summary'>
+          <p>Cable TV</p> 
+          <p>$200</p> 
+        </div>
+
+        <div className='expenses-summary'>
+          <p>Cable TV</p> 
+          <p>$200</p> 
+        </div>
+
+        <div className='expenses-summary'>
+          <p>Cable TV</p> 
+          <p>$200</p> 
+        </div>
       </div>
 
 
