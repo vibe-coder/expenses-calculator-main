@@ -40,13 +40,22 @@ function Calculation() {
                 <input className='expenses-amount' placeholder='Amount' type='number'/>
               </div>
             </div>
-          </form>
-
-          <div className='add-button-div'>
+            <div className='add-button-div'>
               <button className='add-button'>+</button>
             </div>
+            <div className='calculate-button-wrapper'><button className='calculate-button'>Calculate</button></div>
+          </form>
         </div>
       </div>
+
+
+      {/* Expenses Data Collection Form */}
+
+      <div className='summary-wrapper'>
+        Hey
+      </div>
+
+
     </div>
   )
 }

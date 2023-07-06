@@ -60,6 +60,7 @@
       }
       form{
         margin-bottom: 30px;
+        background-color: red;
         .form-inputs{
           display: flex;
           // background-color: red;
@@ -74,7 +75,7 @@
           
           .expenses-title{
             height: 50px;
-            background-color: black;
+            background-color: rgb(0, 0, 0);
             color: white;
             border: none;
             border-radius: 15px;
@@ -95,21 +96,37 @@
             text-indent: 20px;
           }
         }
-      }
-    }
 
-    .add-button-div{
-      display: flex;
-      justify-content: flex-end;
-      .add-button{
-        background-color: #18181b;
-        color: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        font-family: Space Grotesk;
-        font-size: 1.5rem;
+        .add-button-div{
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 30px;
+          margin-bottom: 50px;
+          .add-button{
+            background-color: #18181b;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            font-family: Space Grotesk;
+            font-size: 1.5rem;
+          }
+        }
+
+        .calculate-button-wrapper{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .calculate-button{
+            height: 70px;
+            width: 170px;
+            border-radius: 35px;
+            border: none;
+            background-color: rgb(0, 0, 0);
+            color: white;
+          }
+        }
       }
     }
   }
