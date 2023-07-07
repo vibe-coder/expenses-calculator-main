@@ -1,3 +1,58 @@
-.footer-container{
-  background-color: red;
+
+
+
+@media (min-width:360px) {
+  .footer-container{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    padding: 30px 30px;
+    h1{
+      color:#000;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+    form{
+      display: flex;
+      flex-wrap: wrap;
+      
+      .label-1,.label-2,.label-3{
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+  
+      .input-1,.input-2,.input-3{
+        width: 100%;
+        height: 40px;
+        border-radius: 20px;
+        border-width: 1px;
+        margin-bottom: 30px;
+        background-color: transparent;
+        text-indent: 20px;
+      }
+  
+      .input-3{
+        height: 200px;
+        margin-bottom: 50px;
+      }
+  
+      .submit-button{
+        width: 150px;
+        height: 50px;
+        margin-bottom: 70px;
+        border-radius: 25px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.1rem;
+      }
+    }
+  
+    .vibe-coder{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
 }
