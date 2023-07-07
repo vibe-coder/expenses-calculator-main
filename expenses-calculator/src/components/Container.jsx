@@ -1,7 +1,8 @@
 import React from 'react'
 import "./styles/Container.scss"
 import logo from "../images/EXcal-logo-03.png"
-import subImage from "../images/sub-hero-image.png"
+import savings1 from "../images/savings_01.png"
+import savings2 from "../images/savings-02.png"
 import Calculation from './Calculation'
 import Footer from './Footer'
 import { useRef } from 'react'
@@ -35,13 +36,16 @@ function Container() {
         {/* Sub-Hero Section */}
 
       <div className='sub-hero-section'>
-        <img className='sub-image' src={subImage} alt='sub-img' />
+        <img className='sub-image' src={savings1} alt='sub-img' />
       </div>
 
       <div className='description'>
         <h1>Be Stepps <br/> Ahead!</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officiis molestiae modi tempore? Cum dolor modi molestias consectetur inventore, molestiae explicabo! Libero amet saepe perspiciatis blanditiis molestiae provident nostrum dolorum?</p>
-        <button>Get Started</button>
+        <button onMouseUp={handleClick}>Get Started</button>
+        <div className='sub-hero-section-2'>
+          <img className='sub-image-2' src={savings2} alt='sub-img' />
+        </div>
       </div>
 
 

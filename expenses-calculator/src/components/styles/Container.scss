@@ -110,6 +110,25 @@
         font-weight: 700;
         font-size: 1.1rem;
         color: rgb(255, 255, 255);
+        margin-bottom: 60px;
+      }
+
+      .sub-hero-section-2{
+        background-color: rgba($color: #ffffff, $alpha: 1);
+        height: 32vh;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        margin-bottom: 60px;
+        .sub-image-2{
+          width: 100%;
+        }
       }
     }
   }
