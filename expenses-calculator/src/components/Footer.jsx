@@ -1,5 +1,9 @@
 import React from 'react'
 import "./styles/Footer.scss"
+import gitHub from "../images/social-01.png"
+import Twitter from "../images/social-02.png"
+import LinkedIn from "../images/social-03.png"
+import MySite from "../images/icons8-linking-96.png"
 
 function Footer() {
   return (
@@ -16,7 +20,20 @@ function Footer() {
       </form>
 
       <div className='vibe-coder'>
-        <div className='contact'>Contact</div>
+        <div className='contact'>
+          <a className='icon-link' href='www.linkedin.com' target='blank'>
+            <img className='icon' src={LinkedIn} alt='linkedin'/>
+          </a>
+          <a className='icon-link' href='www.linkedin.com' target='blank'>
+            <img className='icon' src={gitHub} alt='linkedin'/>
+          </a>
+          <a className='icon-link' href='www.linkedin.com' target='blank'>
+            <img className='icon' src={Twitter} alt='linkedin'/>
+          </a>
+          <a className='icon-link' href='www.linkedin.com' target='blank'>
+            <img className='icon' src={MySite} alt='linkedin'/>
+          </a>
+        </div>
         <p>vibe-coder (c) 2023</p>
       </div>
     </div>

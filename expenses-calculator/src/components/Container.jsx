@@ -16,8 +16,8 @@ function Container() {
           <img className='logo' src={logo} alt='logo'/>
         </nav>
         <main>
-          <h1>Be in charge <br/> of your Expenses!</h1>
-          <p>With EXcal, you will always be one step ahead of all your financial expenses. No late surprises!</p>
+          <h1>Be in charge <br/> of your <br/> Expenses!</h1>
+          <p>With EXcal, you will always be one step <br/> ahead of all your financial expenses. <br/> No late surprises!</p>
           <div className='button-wrapper'>
           <button>Get Started</button>
           </div>
