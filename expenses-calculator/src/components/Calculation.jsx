@@ -19,7 +19,7 @@ function Calculation() {
 
       {/* Expenses Data Collection Form */}
 
-      <div className='expenses-input-wrapper'>
+      <div className='expenses-input-wrapper' id='calculation'>
         <div className='expenses-title-div'>
           <p>Expenses</p> 
           <p>Currency</p>

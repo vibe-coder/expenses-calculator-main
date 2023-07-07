@@ -30,6 +30,12 @@ function Container() {
         <img className='sub-image' src={subImage} alt='sub-img' />
       </div>
 
+      <div className='description'>
+        <h1>Be Stepps <br/> Ahead!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officiis molestiae modi tempore? Cum dolor modi molestias consectetur inventore, molestiae explicabo! Libero amet saepe perspiciatis blanditiis molestiae provident nostrum dolorum?</p>
+        <button>Get Started</button>
+      </div>
+
 
 
       <Calculation/>

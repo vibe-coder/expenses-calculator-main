@@ -15,7 +15,7 @@ function Footer() {
         <label className='label-2' for="mail" >Email</label>
         <input className='input-2' type='text' id='mail' name='mail'/>
         <label className='label-3' for="message" >Message</label>
-        <input className='input-3' type='text' id='message' name='message'/>
+        <textarea className='input-3'  type='text' id='message'/>
         <input className='submit-button' type='submit' value="Submit"/>
       </form>
 

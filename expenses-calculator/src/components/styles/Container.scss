@@ -52,7 +52,7 @@
             border: none;
             padding: 20px 0;
             width: 170px;
-            border-radius: 60px;
+            border-radius: 14px;
             font-family: Space Grotesk;
             font-weight: 700;
             font-size: 1.1rem;
@@ -79,9 +79,37 @@
       -webkit-backdrop-filter: blur( 4px );
       border-radius: 10px;
       border: 1px solid rgba( 255, 255, 255, 0.18 );
-      margin-bottom: 70px;
+      margin-bottom: 60px;
       .sub-image{
         width: 100%;
+      }
+    }
+
+    .description{
+      padding: 20px 20px;
+      margin-bottom: 120px;
+
+      h1{
+        font-size: calc(2.7rem + 2.5vw);margin-bottom: 20px;
+        line-height: 60px;
+        margin: 0;
+        margin-bottom: 40px;
+      }
+
+      p{
+        margin-bottom: 40px;
+      }
+
+      button{
+        background-color: #ff3b30;
+        border: none;
+        padding: 20px 0;
+        width: 170px;
+        border-radius: 14px;
+        font-family: Space Grotesk;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: rgb(255, 255, 255);
       }
     }
   }
