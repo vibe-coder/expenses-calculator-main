@@ -13,7 +13,6 @@
       nav{
         .logo{
           width: 70px;
-          filter: invert(100%);
         }
       }
 
@@ -42,7 +41,7 @@
           display: flex;
           justify-content: center;
           button{
-            background-color: #ffffff;
+            background-color: #ff3b30;
             border: none;
             padding: 20px 0;
             width: 170px;
@@ -50,6 +49,7 @@
             font-family: Space Grotesk;
             font-weight: 700;
             font-size: 1.1rem;
+            color: white;
           }
         }
       }
