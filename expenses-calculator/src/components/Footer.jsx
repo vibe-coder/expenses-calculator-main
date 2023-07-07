@@ -16,7 +16,7 @@ function Footer() {
       </form>
 
       <div className='vibe-coder'>
-        <div>Contact</div>
+        <div className='contact'>Contact</div>
         <p>vibe-coder (c) 2023</p>
       </div>
     </div>

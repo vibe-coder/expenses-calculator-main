@@ -42,6 +42,7 @@ function Calculation() {
             </div>
             <div className='add-button-div'>
               <button className='add-button'>+</button>
+              <button className='add-button'>-</button>
             </div>
             <div className='calculate-button-wrapper'><button className='calculate-button'>Calculate</button></div>
           </form>
