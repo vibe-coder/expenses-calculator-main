@@ -3,9 +3,17 @@ import "./styles/Container.scss"
 import logo from "../images/EXcal-logo-03.png"
 import subImage from "../images/sub-hero-image.png"
 import Calculation from './Calculation'
-import Footer from './Footer';
+import Footer from './Footer'
+import { useRef } from 'react'
 
 function Container() {
+
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior:"smooth"})
+  };
+
   return (
     <div className='component-container'>
 
@@ -19,7 +27,7 @@ function Container() {
           <h1>Be in charge <br/> of your <br/> Expenses!</h1>
           <p>With EXcal, you will always be one step <br/> ahead of all your financial expenses. <br/> No late surprises!</p>
           <div className='button-wrapper'>
-          <button>Get Started</button>
+          <button onMouseUp={handleClick}>Get Started</button>
           </div>
         </main>
       </div>
@@ -37,8 +45,9 @@ function Container() {
       </div>
 
 
-
-      <Calculation/>
+      <div ref={ref}>
+        <Calculation />
+      </div>      
       <Footer/>
     </div>
   )

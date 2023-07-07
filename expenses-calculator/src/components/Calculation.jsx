@@ -13,7 +13,8 @@ function Calculation() {
           <p>Annually</p>
         </div>
         <div className='input-container'>
-          <h1>$200,000</h1>
+          <p>$</p>
+          <input className='salary-amount' placeholder='Amount' type='number'/>
         </div>
       </div>
 
