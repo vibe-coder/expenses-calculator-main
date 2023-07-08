@@ -1,7 +1,7 @@
 @media (min-width:360px) {
   .footer-container{
     background-color: rgb(255, 255, 255);
-    height: 100%;
+    height: 100vh;
     padding: 30px 30px;
     padding-top: 60px;
     
@@ -67,6 +67,61 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-container{
+    padding: 70px 70px;
+    // background-color: red;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-wrapper{
+      // background-color: pink;
+      display: flex;
+      width: 100%;
+      gap: 30px;
+
+      .form-input{
+        flex: 1;
+        height: 80%;
+        // background-color: blue;
+        form{
+          width: 100%;
+          // background-color: yellow;
+          display: flex;
+          flex-direction: column;
+  
+          .input-1, .input-2, .input-3{
+            width: 100%;
+            padding: 0;
+          }
+          .input-3{
+            resize: none;
+          }
+          .submit-button{
+            margin: 0;
+          }
+        }
+      }
+  
+  
+  
+      .vibe-coder{
+        background-color: white;
+        display: flex;
+        flex: 2;
+        padding: 0;  
+        margin: 0;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-left: 100px;
+      }
+
     }
   }
 }

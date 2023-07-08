@@ -1,6 +1,6 @@
 @media (min-width: 360px) {
   .calculation-container{
-    margin: 0 20px;
+    // margin: 0 20px;
     font-family: Space Grotesk;
     padding-top: 20px;
 
@@ -44,6 +44,10 @@
           width: 220px;
           border: none;
           text-indent: 10px;
+        }
+
+        .salary-amount::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
+          -webkit-appearance: none;
         }
 
         .salary-amount::placeholder{
@@ -217,6 +221,10 @@
 
     .income-wrapper{
       width: 30%;
+
+      .salary-amount::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+      }
     }
 
     .expenses-input-wrapper{
