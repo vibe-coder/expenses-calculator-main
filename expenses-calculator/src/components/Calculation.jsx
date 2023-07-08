@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 function Calculation() {
 
-  // const [myData, getMyData] = useState()
+  const [myData, getMyData] = useState()
 
 
   function displaySalary(){
@@ -18,11 +18,11 @@ function Calculation() {
     let newData = []
 
     async function getExpensesData (){
-      data = [
+      getMyData(data = [
         {name: document.getElementById("expenses-title-1").value, amount: document.getElementById("expenses-amount-1").value},
         {name: document.getElementById("expenses-title-2").value, amount: document.getElementById("expenses-amount-2").value},
         {name: document.getElementById("expenses-title-3").value, amount: document.getElementById("expenses-amount-3").value},
-      ]
+      ])
 
       data.map((input) =>{
         return(newData.push(input))
@@ -32,8 +32,8 @@ function Calculation() {
       console.log(data)
     }
 
-    console.log(newData)
-    
+    console.log(myData)
+   
 
   
   return (
@@ -94,19 +94,27 @@ function Calculation() {
           <h1>Summary</h1>
         </div>
 
-        <div className='expenses-summary'>
+        {/* <div className='expenses-summary'>
               <p>Hey</p> 
               <p>Hwey</p> 
-           </div>
+           </div> */}
 
-        {/* {myData.map((singleData) => {
-          return (
+        {
+          myData ? (myData.map((singleData) => {
+            return (
+              <div  className='expenses-summary'>
+                <p>{singleData.name}</p> 
+                <p>{singleData.amount}</p> 
+             </div>
+            )
+          } )) : (
             <div className='expenses-summary'>
-              <p>singleData[].name</p> 
-              <p>singleData[].amount</p> 
+              <p> </p> 
+              <p> </p> 
            </div>
           )
-        } )} */}
+        }
+
       </div>
 
 
@@ -115,3 +123,13 @@ function Calculation() {
 }
 
 export default Calculation
+
+// myData.map((singleData) => {
+//   return (
+//     <div  className='expenses-summary'>
+//       <p>{singleData.name}</p> 
+//       <p>{singleData.amount}</p> 
+//    </div>
+//   )
+// } )
+
