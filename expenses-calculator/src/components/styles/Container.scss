@@ -87,7 +87,6 @@
 
     .description{
       padding: 20px 20px;
-      margin-bottom: 120px;
 
       h1{
         font-size: calc(2.7rem + 2.5vw);margin-bottom: 20px;
@@ -129,6 +128,15 @@
         .sub-image-2{
           width: 100%;
         }
+      }
+    }
+
+    .divider{
+      display: flex;
+      justify-content: center;
+      
+      h2{
+        margin: 0;
       }
     }
   }

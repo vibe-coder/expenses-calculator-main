@@ -10,11 +10,11 @@ function Footer() {
     <div className='footer-container'>
       <h1>Get In Touch</h1>
       <form>
-        <label className='label-1' for="name" >Name</label>
+        <label className='label-1' htmlFor="name" >Name</label>
         <input className='input-1' type='text' id='name' name='name'/>
-        <label className='label-2' for="mail" >Email</label>
+        <label className='label-2' htmlFor="mail" >Email</label>
         <input className='input-2' type='text' id='mail' name='mail'/>
-        <label className='label-3' for="message" >Message</label>
+        <label className='label-3' htmlFor="message" >Message</label>
         <textarea className='input-3'  type='text' id='message'/>
         <input className='submit-button' type='submit' value="Submit"/>
       </form>

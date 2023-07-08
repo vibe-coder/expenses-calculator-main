@@ -2,6 +2,27 @@ import React from 'react'
 import "./styles/Calculation.scss"
 
 function Calculation() {
+
+
+  function displayNumber(){
+    let num = document.getElementById('salary').value;
+    console.log(num)
+  }
+
+  const expensesData = [{}]
+
+  function getExpensesData (){
+    let exp_1_Title = document.getElementById("expenses-title-1").value
+    let exp_1_Amount = document.getElementById("expenses-amount-1").value
+    
+    expensesData.push(exp_1_Amount)
+    
+    
+    console.log(exp_1_Amount)
+    console.log(exp_1_Title)
+  }
+
+  
   return (
     <div className='calculation-container'>
 
@@ -14,7 +35,7 @@ function Calculation() {
         </div>
         <div className='input-container'>
           <p>$</p>
-          <input className='salary-amount' placeholder='Amount' type='number'/>
+          <input onChange={displayNumber} className='salary-amount' placeholder='Amount' type='number' min="1" id='salary'/>
         </div>
       </div>
 
@@ -29,16 +50,16 @@ function Calculation() {
           <form>
             <div className='form-inputs'>
               <div className='expenses-input-set'>
-                <input className='expenses-title' placeholder='Expenses' type='text'/>
-                <input className='expenses-amount' placeholder='Amount' type='number'/>
+                <input onChange={getExpensesData} id='expenses-title-1' className='expenses-title' placeholder='Expenses' type='text'/>
+                <input onChange={getExpensesData} id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
               </div>
               <div className='expenses-input-set'>
-                <input className='expenses-title' placeholder='Expenses' type='text'/>
-                <input className='expenses-amount' placeholder='Amount' type='number'/>
+                <input id='expenses-title-2' className='expenses-title' placeholder='Expenses' type='text'/>
+                <input id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
               </div>
               <div className='expenses-input-set'>
-                <input className='expenses-title' placeholder='Expenses' type='text'/>
-                <input className='expenses-amount' placeholder='Amount' type='number'/>
+                <input id='expenses-title-3' className='expenses-title' placeholder='Expenses' type='text'/>
+                <input id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
               </div>
             </div>
             <div className='add-button-div'>

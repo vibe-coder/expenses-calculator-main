@@ -48,6 +48,10 @@ function Container() {
         </div>
       </div>
 
+      <div className='divider'>
+        <h2>.</h2>
+      </div>
+
 
       <div ref={ref}>
         <Calculation />
