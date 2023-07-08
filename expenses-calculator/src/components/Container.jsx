@@ -24,10 +24,11 @@ function Container() {
         <nav>
           <img className='logo' src={logo} alt='logo'/>
         </nav>
+
         <main className='main'>
           <div className='left-section'>
             <h1>Be in charge <br/> of your <br/> Expenses!</h1>
-            <p>With EXcal, you will always be one step <br/> ahead of all your financial expenses. <br/> No late surprises!</p>
+            <p>With EXcal, you will always be one step ahead of all your financial expenses. No late surprises!</p>
             <div className='button-wrapper'>
               <button onMouseUp={handleClick}>Get Started</button>
             </div>
@@ -40,12 +41,6 @@ function Container() {
           </div>
         </main>
       </div>
-
-        {/* Sub-Hero Section */}
-
-      {/* <div className='sub-hero-section'>
-        <img className='sub-image' src={savings1} alt='sub-img' />
-      </div> */}
 
       <div className='description-wrapper'>
         <div className='description-left'>
