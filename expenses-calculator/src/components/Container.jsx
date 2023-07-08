@@ -24,27 +24,38 @@ function Container() {
         <nav>
           <img className='logo' src={logo} alt='logo'/>
         </nav>
-        <main>
-          <h1>Be in charge <br/> of your <br/> Expenses!</h1>
-          <p>With EXcal, you will always be one step <br/> ahead of all your financial expenses. <br/> No late surprises!</p>
-          <div className='button-wrapper'>
-          <button onMouseUp={handleClick}>Get Started</button>
+        <main className='main'>
+          <div className='left-section'>
+            <h1>Be in charge <br/> of your <br/> Expenses!</h1>
+            <p>With EXcal, you will always be one step <br/> ahead of all your financial expenses. <br/> No late surprises!</p>
+            <div className='button-wrapper'>
+              <button onMouseUp={handleClick}>Get Started</button>
+            </div>
+          </div>
+
+          <div className='right-section'>
+            <div className='hero-image-wrapper'>
+              <img className='hero-image' src={savings1} alt='sub-img' />
+            </div>
           </div>
         </main>
       </div>
 
         {/* Sub-Hero Section */}
 
-      <div className='sub-hero-section'>
+      {/* <div className='sub-hero-section'>
         <img className='sub-image' src={savings1} alt='sub-img' />
-      </div>
+      </div> */}
 
-      <div className='description'>
-        <h1>Be Stepps <br/> Ahead!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officiis molestiae modi tempore? Cum dolor modi molestias consectetur inventore, molestiae explicabo! Libero amet saepe perspiciatis blanditiis molestiae provident nostrum dolorum?</p>
-        <button onMouseUp={handleClick}>Get Started</button>
-        <div className='sub-hero-section-2'>
-          <img className='sub-image-2' src={savings2} alt='sub-img' />
+      <div className='description-wrapper'>
+        <div className='description-left'>
+          <h1>Be Stepps <br/> Ahead!</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officiis molestiae modi tempore? Cum dolor modi molestias consectetur inventore, molestiae explicabo! Libero amet saepe perspiciatis blanditiis molestiae provident nostrum dolorum?</p>
+          <button onMouseUp={handleClick}>Get Started</button>
+        </div>
+
+        <div className='description-right'>
+          <img className='description-image' src={savings2} alt='sub-img'/>
         </div>
       </div>
 
