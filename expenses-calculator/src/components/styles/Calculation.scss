@@ -142,6 +142,7 @@
             border-radius: 20px;
             font-family: Space Grotesk;
             font-size: 1.5rem;
+            cursor: pointer;
           }
         }
         .calculate-button-wrapper{
@@ -158,6 +159,10 @@
             font-size: 1.5rem;
             font-weight: 700;
             font-family: Space Grotesk;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
       }

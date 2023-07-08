@@ -1,26 +1,39 @@
 import React from 'react'
 import "./styles/Calculation.scss"
+import { useState, useEffect } from 'react';
 
 function Calculation() {
 
+  // const [myData, getMyData] = useState()
 
-  function displayNumber(){
-    let num = document.getElementById('salary').value;
-    console.log(num)
+
+  function displaySalary(){
+    let salary = document.getElementById('salary').value;
+    console.log(salary)
   }
 
-  const expensesData = [{}]
+    let data = []
 
-  function getExpensesData (){
-    let exp_1_Title = document.getElementById("expenses-title-1").value
-    let exp_1_Amount = document.getElementById("expenses-amount-1").value
     
-    expensesData.push(exp_1_Amount)
+    let newData = []
+
+    async function getExpensesData (){
+      data = [
+        {name: document.getElementById("expenses-title-1").value, amount: document.getElementById("expenses-amount-1").value},
+        {name: document.getElementById("expenses-title-2").value, amount: document.getElementById("expenses-amount-2").value},
+        {name: document.getElementById("expenses-title-3").value, amount: document.getElementById("expenses-amount-3").value},
+      ]
+
+      data.map((input) =>{
+        return(newData.push(input))
+      })
+
+      console.log(newData)
+      console.log(data)
+    }
+
+    console.log(newData)
     
-    
-    console.log(exp_1_Amount)
-    console.log(exp_1_Title)
-  }
 
   
   return (
@@ -35,7 +48,7 @@ function Calculation() {
         </div>
         <div className='input-container'>
           <p>$</p>
-          <input onChange={displayNumber} className='salary-amount' placeholder='Amount' type='number' min="1" id='salary'/>
+          <input onChange={displaySalary} className='salary-amount' placeholder='Amount' type='number' min="1" id='salary'/>
         </div>
       </div>
 
@@ -50,23 +63,25 @@ function Calculation() {
           <form>
             <div className='form-inputs'>
               <div className='expenses-input-set'>
-                <input onChange={getExpensesData} id='expenses-title-1' className='expenses-title' placeholder='Expenses' type='text'/>
-                <input onChange={getExpensesData} id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
+                <input id='expenses-title-1' className='expenses-title' placeholder='Expenses' type='text'/>
+                <input id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
               </div>
               <div className='expenses-input-set'>
                 <input id='expenses-title-2' className='expenses-title' placeholder='Expenses' type='text'/>
-                <input id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
+                <input id='expenses-amount-2' className='expenses-amount' placeholder='Amount' type='number'/>
               </div>
               <div className='expenses-input-set'>
                 <input id='expenses-title-3' className='expenses-title' placeholder='Expenses' type='text'/>
-                <input id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
+                <input  id='expenses-amount-3' className='expenses-amount' placeholder='Amount' type='number'/>
               </div>
             </div>
             <div className='add-button-div'>
               <button className='add-button'>+</button>
               <button className='add-button'>-</button>
             </div>
-            <div className='calculate-button-wrapper'><button className='calculate-button'>Calculate</button></div>
+            <div  className='calculate-button-wrapper'>
+              <div onClick={getExpensesData} className='calculate-button'>Calculate</div>
+            </div>
           </form>
         </div>
       </div>
@@ -80,29 +95,18 @@ function Calculation() {
         </div>
 
         <div className='expenses-summary'>
-          <p>Cable TV</p> 
-          <p>$200</p> 
-        </div>
+              <p>Hey</p> 
+              <p>Hwey</p> 
+           </div>
 
-        <div className='expenses-summary'>
-          <p>Cable TV</p> 
-          <p>$200</p> 
-        </div>
-
-        <div className='expenses-summary'>
-          <p>Cable TV</p> 
-          <p>$200</p> 
-        </div>
-
-        <div className='expenses-summary'>
-          <p>Cable TV</p> 
-          <p>$200</p> 
-        </div>
-
-        <div className='expenses-summary'>
-          <p>Cable TV</p> 
-          <p>$200</p> 
-        </div>
+        {/* {myData.map((singleData) => {
+          return (
+            <div className='expenses-summary'>
+              <p>singleData[].name</p> 
+              <p>singleData[].amount</p> 
+           </div>
+          )
+        } )} */}
       </div>
 
 
