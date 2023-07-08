@@ -142,13 +142,12 @@
 
 @media (min-width: 768px) {
   .component-container{
-    background-color: red;
-
     .hero-section{
       padding: 70px 70px;
       border-bottom-left-radius: 50px;
       border-bottom-right-radius: 50px;
       margin: 0;
+      margin-bottom: 40px;
       .main{
         display: flex;
         justify-content: space-between;
@@ -211,49 +210,45 @@
 
 
     .description-wrapper{
-      background-color: yellow;
       margin: 0;
-      padding: 70px 70px;
+      padding: 70px 150px;
       display: flex;
       justify-content: space-between;
       height: 70vh;
-
+      margin-bottom: 80px;
       .description-left{
-        background-color: red;
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         h1{
           line-height: 80px;
           margin: 0;
           margin-bottom: 30px;
         }
-
         p{
           width: 450px;
           margin: 0;
           margin-bottom: 60px;
         }
-
         button{
           margin: 0;
         }
       }
-
       .description-right{
-        background-color: pink;
         display: flex;
         align-items: center;
         flex: 1;
-
         .description-image{
           height: 80%;
         }
-        
       }
+    }
 
+    .divider{
+      h2{
+        color: transparent;
+      }
     }
   }
 }

@@ -209,7 +209,46 @@
 
 
 @media (min-width: 768px) {
-  
+  .calculation-container{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .income-wrapper{
+      width: 30%;
+    }
+
+    .expenses-input-wrapper{
+      width: 30%;
+
+      .expenses-div{
+        form{
+          .form-inputs{
+            display: flex;
+            justify-content: space-between;
+            .expenses-input-set{
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+
+              .expenses-title{
+                width: 45%;
+              }
+
+              .expenses-amount{
+                width: 45%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .summary-wrapper{
+      width: 30%;
+    }
+  }
 }
 
 
