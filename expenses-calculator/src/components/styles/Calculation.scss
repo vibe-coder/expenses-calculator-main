@@ -220,10 +220,7 @@
     .income-wrapper{
       width: 60%;
       margin: 0;
-      margin-bottom: 30px;
-
-
-
+      margin-bottom: 35px;
       .salary-amount::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
         -webkit-appearance: none;
       }
@@ -233,14 +230,7 @@
       display: flex;
       justify-content: center;
       gap: 40px;
-      margin-bottom: 140px;
-
-      .expenses-summary{
-        p{
-          
-        }
-      }
-      
+      margin-bottom: 140px;      
     }
 
     .expenses-input-wrapper{
