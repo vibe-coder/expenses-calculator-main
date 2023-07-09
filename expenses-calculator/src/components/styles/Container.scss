@@ -152,8 +152,16 @@
 
       nav{
         margin-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+        background-color: blue;
         .logo{
           height: 40px;
+        }
+
+        .links{
+          display: flex;
+          align-items: center;
         }
       }
       .main{

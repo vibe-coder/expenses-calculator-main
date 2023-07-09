@@ -23,6 +23,11 @@ function Container() {
       <div className="hero-section">
         <nav>
           <img className='logo' src={logo} alt='logo'/>
+          <div className='links'>
+            <button className='link-button'>About us</button>
+            <button className='link-button'>Product</button>
+            <button className='link-button'>Contact</button>
+          </div>
         </nav>
 
         <main className='main'>
