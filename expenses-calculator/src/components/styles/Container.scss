@@ -154,14 +154,29 @@
         margin-bottom: 100px;
         display: flex;
         justify-content: space-between;
-        background-color: blue;
         .logo{
           height: 40px;
         }
-
         .links{
           display: flex;
           align-items: center;
+          gap: 10px;
+          .link-button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            font-family: Space Grotesk;
+            font-size: .9rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+          }
+
+          .link-button:hover{
+            background-color: #ff3b30
+          }
         }
       }
       .main{

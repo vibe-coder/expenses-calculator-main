@@ -9,24 +9,37 @@ import { useRef } from 'react'
 
 function Container() {
 
-  const ref = useRef(null);
+  const productRef = useRef(null);
 
   const handleClick = () => {
-    ref.current?.scrollIntoView({behavior:"smooth"})
+    productRef.current?.scrollIntoView({behavior:"smooth", block:'start'})
   };
+
+  const contactRef = useRef(null);
+
+  const contactClick = () => {
+    contactRef.current?.scrollIntoView({behavior:"smooth", block:'start'})
+  }
+
+  const aboutRef = useRef(null)
+
+  const aboutClick = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth", block:'start'})
+  }
+
+
 
   return (
     <div className='component-container'>
 
       {/* Hero Section */}
-
       <div className="hero-section">
         <nav>
           <img className='logo' src={logo} alt='logo'/>
           <div className='links'>
-            <button className='link-button'>About us</button>
-            <button className='link-button'>Product</button>
-            <button className='link-button'>Contact</button>
+            <button className='link-button' onClick={aboutClick}>About us</button>
+            <button className='link-button' onMouseUp={handleClick}>Product</button>
+            <button className='link-button' onClick={contactClick}>Contact</button>
           </div>
         </nav>
 
@@ -47,7 +60,7 @@ function Container() {
         </main>
       </div>
 
-      <div className='description-wrapper'>
+      <div ref={aboutRef} className='description-wrapper'>
         <div className='description-left'>
           <h1>Be Stepps <br/> Ahead!</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officiis molestiae modi tempore? Cum dolor modi molestias consectetur inventore, molestiae explicabo! Libero amet saepe perspiciatis blanditiis molestiae provident nostrum dolorum?</p>
@@ -64,10 +77,13 @@ function Container() {
       </div>
 
 
-      <div ref={ref}>
+      <div ref={productRef}>
         <Calculation />
-      </div>      
-      <Footer/>
+      </div>     
+
+      <div ref={contactRef}>
+        <Footer/>
+      </div>
     </div>
   )
 }
