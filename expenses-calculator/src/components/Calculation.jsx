@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles/Calculation.scss"
-import { useState, useEffect } from 'react';
+import { useState,} from 'react';
 
 function Calculation() {
 
@@ -54,6 +54,7 @@ function Calculation() {
 
       {/* Expenses Data Collection Form */}
 
+      <div className='expenses-summary-wrapper'>
       <div className='expenses-input-wrapper' id='calculation'>
         <div className='expenses-title-div'>
           <p>Expenses</p> 
@@ -88,7 +89,7 @@ function Calculation() {
 
 
       {/* Expenses Data Collection Form */}
-
+    
       <div className='summary-wrapper'>
         <div className='summary-title-div'>
           <h1>Summary</h1>
@@ -116,8 +117,7 @@ function Calculation() {
         }
 
       </div>
-
-
+      </div>
     </div>
   )
 }
