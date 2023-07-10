@@ -4,35 +4,31 @@ import { useState,} from 'react';
 
 function Calculation() {
 
-  const [myData, getMyData] = useState()
+  const [myExpenses, getMyExpenses] = useState()
 
+
+
+// **************** Getting salary input
 
   function displaySalary(){
     let salary = document.getElementById('salary').value;
     console.log(salary)
+
+    let annualSalary = salary * 12
+    document.getElementById("annual-salary").innerHTML = annualSalary
+    console.log(annualSalary)
   }
 
+// *************** Getting Expenses input
     let data = []
-
-    
-    let newData = []
-
     async function getExpensesData (){
-      getMyData(data = [
+      getMyExpenses(data = [
         {name: document.getElementById("expenses-title-1").value, amount: document.getElementById("expenses-amount-1").value},
         {name: document.getElementById("expenses-title-2").value, amount: document.getElementById("expenses-amount-2").value},
         {name: document.getElementById("expenses-title-3").value, amount: document.getElementById("expenses-amount-3").value},
       ])
-
-      data.map((input) =>{
-        return(newData.push(input))
-      })
-
-      console.log(newData)
       console.log(data)
     }
-
-    console.log(myData)
    
 
   
@@ -42,13 +38,21 @@ function Calculation() {
       {/* Salary data collection form */}
       
       <div id='income-wrapper' className="income-wrapper">
-        <div className='income-input-wrapper'>
-          <p>Your Income</p>  
-          <p>Annually</p>
+        <div className='income-period-wrapper'>
+          <p>Your Income / Monthly</p>  
+          <p>Your Income / Annually</p>
         </div>
-        <div className='input-container'>
-          <p>$</p>
-          <input onChange={displaySalary} className='salary-amount' placeholder='Amount' type='number' min="1" id='salary'/>
+        
+        <div className="salary-container">
+          <div className='input-container'>
+            <p>$</p>
+            <input onChange={displaySalary} className='salary-amount' placeholder='Amount' type='number' min="1" id='salary'/>
+          </div>
+
+          <div className='input-container'>
+            <p>$</p>
+            <p id='annual-salary'></p>
+          </div>
         </div>
       </div>
 
@@ -58,7 +62,7 @@ function Calculation() {
       <div className='expenses-input-wrapper' id='calculation'>
         <div className='expenses-title-div'>
           <p>Expenses</p> 
-          <p>Currency</p>
+          <p>Percentage</p>
         </div>
         <div className='expenses-div'>
           <form>
@@ -101,11 +105,11 @@ function Calculation() {
            </div> */}
 
         {
-          myData ? (myData.map((singleData) => {
+          myExpenses ? (myExpenses.map((singleExpenses) => {
             return (
               <div  className='expenses-summary'>
-                <p>{singleData.name}</p> 
-                <p>{singleData.amount}</p> 
+                <p>{singleExpenses.name}</p> 
+                <p>{singleExpenses.amount}</p> 
              </div>
             )
           } )) : (
