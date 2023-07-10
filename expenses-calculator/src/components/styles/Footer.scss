@@ -168,6 +168,11 @@
         flex-wrap: wrap;
         flex-direction: row;
         margin-top: 30px;
+
+        .box4{
+          margin: 0;
+          padding: 0;
+        }
       }
       .form > div {
         display: flex; 
@@ -180,8 +185,6 @@
         flex-direction: column;
         height: 100%;
 
-        // background-color: yellow;
-
         .label-1, .label-2, .label-3{
           font-size: 1.2rem;
           margin: 0;
@@ -192,11 +195,12 @@
 
         .input-1, .input-2{
           height: 40px;
-          width: 1005;
+          width: 100%;
           border-radius: 6px;
           text-indent: 10px;
           background-color: transparent;
           border-width: 1px;
+          padding: 0;
         }
 
         .message-wrapper{
@@ -221,6 +225,11 @@
             color: #fff;
             font-size: 1.1rem;
             border: none;
+            transition: 0.2s ease-in-out;
+          }
+
+          .submit-button:hover{
+            background-color: #1f1f1f;
           }
         }
 

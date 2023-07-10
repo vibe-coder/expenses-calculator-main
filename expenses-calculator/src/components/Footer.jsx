@@ -5,24 +5,42 @@ import Twitter from "../images/twitter.svg"
 import LinkedIn from "../images/linkedIn.svg"
 import MySite from "../images/external-link.svg"
 
+import { useRef } from 'react';
+import emailjs from "@emailjs/browser";
+
 function Footer() {
+
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_8j0022z', 'template_x6pcepn', form.current, 'NVFUVv29FFrnIZG8H')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
+
   return (
     <div className='footer-container'>
       <div className='footer-wrapper'>
         <h1 className='header'>Get In Touch</h1>
-        <div className="form">
-          
+        <form ref={form} className="form" onSubmit={sendEmail}>
+
           <div className="box box1">
             <div>
               <label className='label-1' htmlFor="name" >Name</label>
-              <input className='input-1' type='text' id='name' name='name'/>
+              <input className='input-1' type='text' id='user_name' name='user_name'/>
             </div>
           </div>
 
           <div className="box box2">
             <div>
               <label className='label-2' htmlFor="mail" >Email</label>
-              <input className='input-2' type='text' id='mail' name='mail'/>
+              <input className='input-2' type='email' id='user_email' name='user_email'/>
             </div>
           </div>
 
@@ -30,7 +48,7 @@ function Footer() {
             <div>
               <div className='message-wrapper'>
               <label className='label-3' htmlFor="message" >Message</label>
-              <textarea className='input-3'  type='text' id='message'/>
+              <textarea className='input-3'  type='text' id='message' name='message'/>
               <input className='submit-button' type='submit' value="Submit"/>
               </div>
             </div>
@@ -57,9 +75,7 @@ function Footer() {
               </div>
             </div>
           </div>
-
-
-        </div>
+        </form>
       </div>
     </div>
   )
