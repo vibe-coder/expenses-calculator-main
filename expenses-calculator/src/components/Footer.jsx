@@ -1,9 +1,9 @@
 import React from 'react'
 import "./styles/Footer.scss"
-import gitHub from "../images/social-01.png"
-import Twitter from "../images/social-02.png"
-import LinkedIn from "../images/social-03.png"
-import MySite from "../images/icons8-linking-96.png"
+import gitHub from "../images/github.svg"
+import Twitter from "../images/twitter.svg"
+import LinkedIn from "../images/linkedIn.svg"
+import MySite from "../images/external-link.svg"
 
 function Footer() {
   return (
@@ -20,9 +20,8 @@ function Footer() {
 
           <div class="box box2">
             <div>
-            <label className='label-2' htmlFor="mail" >Email</label>
-            <input className='input-2' type='text' id='mail' name='mail'/>
-
+              <label className='label-2' htmlFor="mail" >Email</label>
+              <input className='input-2' type='text' id='mail' name='mail'/>
             </div>
           </div>
 
@@ -40,17 +39,17 @@ function Footer() {
             <div>
               <div className='vibe-coder'>
                 <div className='contact'>
-                  <a className='icon-link' href='www.linkedin.com' target='blank'>
+                  <a className='icon-link' href='https://www.linkedin.com/in/david-irinyemi-395220162/' target='blank'>
                     <img className='icon' src={LinkedIn} alt='linkedin'/>
                   </a>
-                  <a className='icon-link' href='www.linkedin.com' target='blank'>
-                    <img className='icon' src={gitHub} alt='linkedin'/>
+                  <a className='icon-link' href='https://github.com/vibe-coder' target='blank'>
+                    <img className='icon' src={gitHub} alt='giuthub'/>
                   </a>
-                  <a className='icon-link' href='www.linkedin.com' target='blank'>
-                    <img className='icon' src={Twitter} alt='linkedin'/>
+                  <a className='icon-link' href='https://twitter.com/vibe_coder' target='blank'>
+                    <img className='icon' src={Twitter} alt='twitter'/>
                   </a>
-                  <a className='icon-link' href='www.linkedin.com' target='blank'>
-                    <img className='icon' src={MySite} alt='linkedin'/>
+                  <a className='icon-link' href='https://vibe-coder.netlify.app/' target='blank'>
+                    <img className='icon' src={MySite} alt='site'/>
                   </a>
                 </div>
                 <p className='me'>vibe-coder (c) 2023</p>
