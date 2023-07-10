@@ -10,22 +10,22 @@ function Footer() {
     <div className='footer-container'>
       <div className='footer-wrapper'>
         <h1 className='header'>Get In Touch</h1>
-        <div class="form">
-          <div class="box box1">
+        <div className="form">
+          <div className="box box1">
             <div>
               <label className='label-1' htmlFor="name" >Name</label>
               <input className='input-1' type='text' id='name' name='name'/>
             </div>
           </div>
 
-          <div class="box box2">
+          <div className="box box2">
             <div>
               <label className='label-2' htmlFor="mail" >Email</label>
               <input className='input-2' type='text' id='mail' name='mail'/>
             </div>
           </div>
 
-          <div class="box box3">
+          <div className="box box3">
             <div>
               <div className='message-wrapper'>
               <label className='label-3' htmlFor="message" >Message</label>
@@ -35,7 +35,7 @@ function Footer() {
             </div>
           </div>
 
-          <div class="box box4">
+          <div className="box box4">
             <div>
               <div className='vibe-coder'>
                 <div className='contact'>
