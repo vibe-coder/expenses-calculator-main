@@ -11,6 +11,7 @@ function Footer() {
       <div className='footer-wrapper'>
         <h1 className='header'>Get In Touch</h1>
         <div className="form">
+          
           <div className="box box1">
             <div>
               <label className='label-1' htmlFor="name" >Name</label>
