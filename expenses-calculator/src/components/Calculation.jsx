@@ -51,7 +51,8 @@ function Calculation() {
     // }
 
     if(monthlyExpenses){
-      totalSalary = Number(monthlyExpenses[0].amount) + Number(monthlyExpenses[1].amount) + Number(monthlyExpenses[2].amount)
+      totalSalary = Number(monthlyExpenses[0].amount) + Number(monthlyExpenses[1].amount) + Number(monthlyExpenses[2].amount) 
+      totalSalary = totalSalary / 100 * mySalary
       yearlySalary = Number(totalSalary * 12)
       console.log(yearlySalary)
     }
@@ -140,7 +141,7 @@ function Calculation() {
             return (
               <div className='expenses-summary'>
                 <p>{singleExpenses.name}</p> 
-                <p>$ {calculatedExpenses.toFixed(2)}</p> 
+                <p>$ {calculatedExpenses}</p> 
               </div>
             )
           } )) : (
@@ -159,7 +160,7 @@ function Calculation() {
 
           <div className="annually">
             <p>Total Expenses <strong>Annually:</strong></p>
-            <p>$ {yearlySalary}</p>
+            <p>$ {yearlySalary.toFixed(2)}</p>
           </div>
         </div>
       </div>
