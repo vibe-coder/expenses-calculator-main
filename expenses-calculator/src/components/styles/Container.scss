@@ -95,7 +95,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: rgba(96, 96, 96, 0.25);
+            background: rgba(185, 185, 185, 0.25);
             backdrop-filter: blur( 4px );
             -webkit-backdrop-filter: blur( 4px );
             border-radius: 10px;
@@ -252,13 +252,10 @@
           align-items: center;
           height: 100%;
           justify-content: flex-end;
-
-
           .hero-image-wrapper{
             margin: 0;
             height:100%;
             width: 100%;
-            
           }
           .hero-image{
             width: 90%;

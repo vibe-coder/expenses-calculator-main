@@ -38,30 +38,21 @@ function Calculation() {
   }
 
 
-
 // ************ Calculating Expenses per Month and per Year
 
     let totalSalary = ""
     let yearlySalary = ""
     let monthlyExpenses = myExpenses
     
-    
-    // if(monthlyExpenses){
-    //   console.log(monthlyExpenses[1].amount)
-    // }
 
     if(monthlyExpenses){
       totalSalary = Number(monthlyExpenses[0].amount) + Number(monthlyExpenses[1].amount) + Number(monthlyExpenses[2].amount) 
-      totalSalary = totalSalary / 100 * mySalary
-      yearlySalary = Number(totalSalary * 12)
+      totalSalary = (totalSalary / 100 * mySalary).toFixed(2)
+      yearlySalary = Number(totalSalary * 12).toFixed(2)
       console.log(yearlySalary)
     }
 
 
-
-
-
-  
   return (
     <div className='calculation-container'>
 
@@ -81,7 +72,7 @@ function Calculation() {
 
           <div className='input-container'>
             <p>$</p>
-            <p id='annual-salary'></p>
+            <p className='annual-salary' id='annual-salary'></p>
           </div>
         </div>
       </div>
@@ -141,7 +132,7 @@ function Calculation() {
             return (
               <div className='expenses-summary'>
                 <p>{singleExpenses.name}</p> 
-                <p>$ {calculatedExpenses}</p> 
+                <p>$ {calculatedExpenses.toFixed(2)}</p> 
               </div>
             )
           } )) : (
@@ -160,7 +151,7 @@ function Calculation() {
 
           <div className="annually">
             <p>Total Expenses <strong>Annually:</strong></p>
-            <p>$ {yearlySalary.toFixed(2)}</p>
+            <p>$ {yearlySalary}</p>
           </div>
         </div>
       </div>
