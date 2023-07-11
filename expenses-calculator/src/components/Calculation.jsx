@@ -39,20 +39,21 @@ function Calculation() {
 
 
 
-   
-
 // ************ Calculating Expenses per Month and per Year
 
-    let totalSalary = 0
+    let totalSalary = ""
+    let yearlySalary = ""
     let monthlyExpenses = myExpenses
     
+    
+    // if(monthlyExpenses){
+    //   console.log(monthlyExpenses[1].amount)
+    // }
 
     if(monthlyExpenses){
-      for(let i = 0; i <= monthlyExpenses.length; i++){
-        totalSalary = monthlyExpenses.amount[i]
-        
-        return totalSalary
-      }
+      totalSalary = Number(monthlyExpenses[0].amount) + Number(monthlyExpenses[1].amount) + Number(monthlyExpenses[2].amount)
+      yearlySalary = Number(totalSalary * 12)
+      console.log(yearlySalary)
     }
 
 
@@ -153,12 +154,12 @@ function Calculation() {
         <div className='total-div'>
           <div className='monthly'>
             <p>Total Expenses <strong>Monthly:</strong></p>
-            {/* <p>$ {totalSalary}</p> */}
+            <p>$ {totalSalary}</p>
           </div>
 
           <div className="annually">
             <p>Total Expenses <strong>Annually:</strong></p>
-            {/* <p>$ {totalSalary}</p> */}
+            <p>$ {yearlySalary}</p>
           </div>
         </div>
       </div>
