@@ -6,30 +6,58 @@ function Calculation() {
 
   const [myExpenses, getMyExpenses] = useState()
 
+  const [mySalary, getMySalary] = useState()
+
 
 
 // **************** Getting salary input
 
+  let annualSalary = ""
+
   function displaySalary(){
     let salary = document.getElementById('salary').value;
-    console.log(salary)
+    getMySalary(salary)
+    // console.log(salary)
 
-    let annualSalary = salary * 12
+    annualSalary = salary * 12
     document.getElementById("annual-salary").innerHTML = annualSalary
-    console.log(annualSalary)
+    // console.log(annualSalary)
   }
 
+  // console.log(mySalary)
+
 // *************** Getting Expenses input
-    let data = []
-    async function getExpensesData (){
-      getMyExpenses(data = [
-        {name: document.getElementById("expenses-title-1").value, amount: document.getElementById("expenses-amount-1").value},
-        {name: document.getElementById("expenses-title-2").value, amount: document.getElementById("expenses-amount-2").value},
-        {name: document.getElementById("expenses-title-3").value, amount: document.getElementById("expenses-amount-3").value},
-      ])
-      console.log(data)
-    }
+  let data = []
+  async function getExpensesData (){
+    getMyExpenses(data = [
+      {name: document.getElementById("expenses-title-1").value, amount: document.getElementById("expenses-amount-1").value},
+      {name: document.getElementById("expenses-title-2").value, amount: document.getElementById("expenses-amount-2").value},
+      {name: document.getElementById("expenses-title-3").value, amount: document.getElementById("expenses-amount-3").value},
+    ])
+    // console.log(data)
+  }
+
+
+
    
+
+// ************ Calculating Expenses per Month and per Year
+
+    let totalSalary = 0
+    let monthlyExpenses = myExpenses
+    
+
+    if(monthlyExpenses){
+      for(let i = 0; i <= monthlyExpenses.length; i++){
+        totalSalary = monthlyExpenses.amount[i]
+        
+        return totalSalary
+      }
+    }
+
+
+
+
 
   
   return (
@@ -59,35 +87,37 @@ function Calculation() {
       {/* Expenses Data Collection Form */}
 
       <div className='expenses-summary-wrapper'>
-      <div className='expenses-input-wrapper' id='calculation'>
-        <div className='expenses-title-div'>
-          <p>Expenses</p> 
-          <p>Percentage</p>
-        </div>
-        <div className='expenses-div'>
-          <form>
-            <div className='form-inputs'>
-              <div className='expenses-input-set'>
-                <input id='expenses-title-1' className='expenses-title' placeholder='Expenses' type='text'/>
-                <input id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
+        <div className='expenses-input-wrapper' id='calculation'>
+          
+          <div className='expenses-title-div'>
+            <p>Expenses</p> 
+            <p>Percentage</p>
+          </div>
+
+          <div className='expenses-div'>
+            <form>
+              <div className='form-inputs'>
+                <div className='expenses-input-set'>
+                  <input id='expenses-title-1' className='expenses-title' placeholder='Expenses' type='text'/>
+                  <input id='expenses-amount-1' className='expenses-amount' placeholder='Amount' type='number'/>
+                </div>
+                <div className='expenses-input-set'>
+                  <input id='expenses-title-2' className='expenses-title' placeholder='Expenses' type='text'/>
+                  <input id='expenses-amount-2' className='expenses-amount' placeholder='Amount' type='number'/>
+                </div>
+                <div className='expenses-input-set'>
+                  <input id='expenses-title-3' className='expenses-title' placeholder='Expenses' type='text'/>
+                  <input  id='expenses-amount-3' className='expenses-amount' placeholder='Amount' type='number'/>
+                </div>
               </div>
-              <div className='expenses-input-set'>
-                <input id='expenses-title-2' className='expenses-title' placeholder='Expenses' type='text'/>
-                <input id='expenses-amount-2' className='expenses-amount' placeholder='Amount' type='number'/>
+              {/* <div className='add-button-div'>
+                <button className='add-button'>+</button>
+                <button className='add-button'>-</button>
+              </div> */}
+              <div  className='calculate-button-wrapper'>
+                <div onClick={getExpensesData} className='calculate-button'>Calculate</div>
               </div>
-              <div className='expenses-input-set'>
-                <input id='expenses-title-3' className='expenses-title' placeholder='Expenses' type='text'/>
-                <input  id='expenses-amount-3' className='expenses-amount' placeholder='Amount' type='number'/>
-              </div>
-            </div>
-            <div className='add-button-div'>
-              <button className='add-button'>+</button>
-              <button className='add-button'>-</button>
-            </div>
-            <div  className='calculate-button-wrapper'>
-              <div onClick={getExpensesData} className='calculate-button'>Calculate</div>
-            </div>
-          </form>
+            </form>
         </div>
       </div>
 
@@ -103,14 +133,14 @@ function Calculation() {
               <p>Hey</p> 
               <p>Hwey</p> 
            </div> */}
-
         {
           myExpenses ? (myExpenses.map((singleExpenses) => {
+            let calculatedExpenses = singleExpenses.amount / 100 * mySalary
             return (
-              <div  className='expenses-summary'>
+              <div className='expenses-summary'>
                 <p>{singleExpenses.name}</p> 
-                <p>{singleExpenses.amount}</p> 
-             </div>
+                <p>$ {calculatedExpenses.toFixed(2)}</p> 
+              </div>
             )
           } )) : (
             <div className='expenses-summary'>
@@ -119,6 +149,18 @@ function Calculation() {
            </div>
           )
         }
+
+        <div className='total-div'>
+          <div className='monthly'>
+            <p>Total Expenses <strong>Monthly:</strong></p>
+            {/* <p>$ {totalSalary}</p> */}
+          </div>
+
+          <div className="annually">
+            <p>Total Expenses <strong>Annually:</strong></p>
+            {/* <p>$ {totalSalary}</p> */}
+          </div>
+        </div>
       </div>
       </div>
     </div>

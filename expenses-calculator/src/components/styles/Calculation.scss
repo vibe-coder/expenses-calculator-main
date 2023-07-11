@@ -74,10 +74,12 @@
     // ********************** Expenses Data Collection Form Styles
 
     .expenses-input-wrapper{
-      background-color:#ffff;
+      background-color:#ffffff;
       border-radius: 30px;
       padding: 30px 30px;
       margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
 
       .expenses-title-div{
         margin-bottom: 40px;
@@ -90,7 +92,16 @@
           color: #71717a;
         }
       }
+
+      .expenses-div{
+        height: 100%;
+      }
       form{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        // background-color: red;
         .form-inputs{
           display: flex;
           justify-content: space-between;
@@ -153,6 +164,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-top: 30px;
           .calculate-button{
             height: 70px;
             width: 100%;
@@ -204,6 +216,23 @@
           color: rgb(0, 0, 0);
         }
       }
+
+      .total-div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        // background-color: red;
+
+        .monthly, .annually{
+          display: flex;
+          justify-content: space-between;
+          // border-bottom: solid 1px #cccccc;
+
+          p{
+            // margin: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -232,7 +261,7 @@
       display: flex;
       justify-content: center;
       gap: 40px;
-      margin-bottom: 140px;      
+      margin-bottom: 140px;   
     }
 
     .expenses-input-wrapper{
