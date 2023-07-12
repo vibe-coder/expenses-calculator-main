@@ -46,7 +46,7 @@ function Container() {
         <main className='main'>
           <div className='left-section'>
             <h1>Be in charge <br/> of your <br/> Expenses!</h1>
-            <p>With EXcal, you will always be one step ahead of all your financial expenses. No late surprises!</p>
+            <p>With EXcal, you will always be one step <br/> ahead of all your financial expenses. <strong>No late surprises!</strong></p>
             <div className='button-wrapper'>
               <button onMouseUp={handleClick}>Get Started</button>
             </div>
@@ -62,8 +62,8 @@ function Container() {
 
       <div ref={aboutRef} className='description-wrapper'>
         <div className='description-left'>
-          <h1>Be Stepps <br/> Ahead!</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officiis molestiae modi tempore? Cum dolor modi molestias consectetur inventore, molestiae explicabo! Libero amet saepe perspiciatis blanditiis molestiae provident nostrum dolorum?</p>
+          <h1>Be Steps <br/> Ahead!</h1>
+          <p>Budget planning and handling expenses sometimes can be difficult and hard to track. So, if you’re looking for ways to manage your financially stressful situation, you are at the right place!  </p>
           <button onMouseUp={handleClick}>Get Started</button>
         </div>
 

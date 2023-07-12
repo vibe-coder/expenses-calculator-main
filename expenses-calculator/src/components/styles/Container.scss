@@ -52,8 +52,8 @@
             color: #ffffff;
             line-height: 49px;
             margin: 0;
-            // font-weight: 100;
-            font-size: calc(2.7rem + 2.5vw);margin-bottom: 20px;
+            font-size: calc(2.7rem + 2.5vw);
+            margin-bottom: 30px;
           }
   
           p{
@@ -62,6 +62,8 @@
             font-weight: 300;
             margin-bottom: 80px;
             color:  #d1d1d1;
+            line-height: 27px;
+            
           }
   
           .button-wrapper{
@@ -104,6 +106,8 @@
 
             .hero-image{
               width: 100%;
+              // height: 100%;
+              // object-fit: cover;
             }
           }
         }
@@ -234,7 +238,6 @@
             margin: 0;
             margin-bottom: 30px;
             font-size: 5rem;
-            
           }
 
           p{
@@ -288,6 +291,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: 0;
+        padding: 0;
         h1{
           line-height: 80px;
           margin: 0;
@@ -306,8 +311,12 @@
         display: flex;
         align-items: center;
         flex: 1;
+        margin: 0;
+        padding: 0;
         .description-image{
-          height: 80%;
+          width: 100%;
+          object-fit: cover;
+          margin: 0;
         }
       }
     }
